@@ -1,6 +1,6 @@
 {
   "name": "mattpocock-skills-zh-cn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "面向 Codex 的简体中文工程工作流：需求追问、spec/ticket、TDD、代码审查、领域建模等。",
   "author": {
     "name": "zhangyilin666",

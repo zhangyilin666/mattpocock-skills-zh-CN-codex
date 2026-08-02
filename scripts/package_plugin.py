@@ -30,6 +30,28 @@ def canonical_file_bytes(path: Path) -> bytes:
     return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
 
 
+def create_archive(plugin: Path, archive: Path) -> None:
+    """Create a ZIP with canonical member order, metadata, and file contents."""
+    paths = sorted(
+        (item for item in plugin.rglob("*") if item.is_file()),
+        key=lambda item: item.relative_to(plugin).as_posix(),
+    )
+
+    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as output:
+        for path in paths:
+            relative = Path(plugin.name) / path.relative_to(plugin)
+            info = zipfile.ZipInfo(relative.as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
+            info.create_system = 3
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            output.writestr(
+                info,
+                canonical_file_bytes(path),
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            )
+
+
 def main() -> int:
     validation = subprocess.run([sys.executable, str(ROOT / "scripts" / "validate.py")], check=False)
     if validation.returncode:
@@ -40,18 +62,7 @@ def main() -> int:
     archive = DIST / f"mattpocock-skills-zh-cn-{version}.zip"
     DIST.mkdir(exist_ok=True)
 
-    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as output:
-        for path in sorted(item for item in PLUGIN.rglob("*") if item.is_file()):
-            relative = Path(PLUGIN.name) / path.relative_to(PLUGIN)
-            info = zipfile.ZipInfo(relative.as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o100644 << 16
-            output.writestr(
-                info,
-                canonical_file_bytes(path),
-                compress_type=zipfile.ZIP_DEFLATED,
-                compresslevel=9,
-            )
+    create_archive(PLUGIN, archive)
 
     digest = hashlib.sha256(archive.read_bytes()).hexdigest().upper()
     checksum = DIST / "SHA256SUMS.txt"

@@ -1,6 +1,6 @@
 # Matt Pocock 工程 Skills 中文版（Codex 插件）
 
-这是 `mattpocock/skills` 简体中文本地化版本的 Codex 原生插件适配包。Codex 适配版本为 `1.0.1`，基于 `vinvcn/mattpocock-skills-zh-CN@f2b2464`，保留 25 个稳定、可发布的 Skills，并补齐 `.codex-plugin/plugin.json`、`agents/openai.yaml`、调用策略与安全边界。
+这是 `mattpocock/skills` 简体中文本地化版本的 Codex 原生插件适配包。Codex 适配版本为 `1.0.2`，基于 `vinvcn/mattpocock-skills-zh-CN@f2b2464`，保留 25 个稳定、可发布的 Skills，并补齐 `.codex-plugin/plugin.json`、`agents/openai.yaml`、调用策略与安全边界。
 
 ## 适配范围
 

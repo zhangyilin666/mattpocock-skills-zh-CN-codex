@@ -2,6 +2,12 @@
 
 本项目遵循 [Semantic Versioning](https://semver.org/)。
 
+## 1.0.2 - 2026-08-02
+
+### Fixed
+
+- 固定 ZIP 成员的 POSIX 路径排序规则和 Unix 创建平台元数据，消除 Windows 与 Linux 的归档字节差异。
+
 ## 1.0.1 - 2026-08-02
 
 ### Fixed
