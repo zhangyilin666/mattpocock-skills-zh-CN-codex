@@ -2,6 +2,13 @@
 
 本项目遵循 [Semantic Versioning](https://semver.org/)。
 
+## 1.0.1 - 2026-08-02
+
+### Fixed
+
+- 打包前将 UTF-8 文本统一为 LF 换行，确保 Windows 与 Linux 生成相同的插件 ZIP。
+- 为文本换行规范化和二进制字节保真增加回归测试，并纳入验证与发布工作流。
+
 ## 1.0.0 - 2026-08-02
 
 ### Added

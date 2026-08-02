@@ -58,7 +58,7 @@ python -X utf8 scripts/package_plugin.py
 
 ## 版本与来源
 
-- Codex 适配版：`1.0.0`
+- Codex 适配版：`1.0.1`
 - 中文来源：[`vinvcn/mattpocock-skills-zh-CN`](https://github.com/vinvcn/mattpocock-skills-zh-CN)，commit `f2b24646b1ea47f093d26c79a94aaf522007da49`
 - 原始项目：[`mattpocock/skills`](https://github.com/mattpocock/skills)
 - 适配维护：[`zhangyilin666`](https://github.com/zhangyilin666)

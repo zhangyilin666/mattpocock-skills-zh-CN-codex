@@ -16,6 +16,20 @@ PLUGIN = ROOT / "plugins" / "mattpocock-skills-zh-cn"
 DIST = ROOT / "dist"
 
 
+def canonical_file_bytes(path: Path) -> bytes:
+    """Return platform-independent bytes for an archive member."""
+    data = path.read_bytes()
+    if b"\x00" in data:
+        return data
+
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        return data
+
+    return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+
+
 def main() -> int:
     validation = subprocess.run([sys.executable, str(ROOT / "scripts" / "validate.py")], check=False)
     if validation.returncode:
@@ -32,7 +46,12 @@ def main() -> int:
             info = zipfile.ZipInfo(relative.as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
-            output.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+            output.writestr(
+                info,
+                canonical_file_bytes(path),
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            )
 
     digest = hashlib.sha256(archive.read_bytes()).hexdigest().upper()
     checksum = DIST / "SHA256SUMS.txt"
