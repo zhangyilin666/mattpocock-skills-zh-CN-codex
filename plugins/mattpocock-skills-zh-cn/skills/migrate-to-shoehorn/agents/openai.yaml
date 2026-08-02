@@ -1,0 +1,4 @@
+interface:
+  display_name: "迁移到 Shoehorn"
+  short_description: "把测试中的类型断言安全迁移为 @total-typescript/shoehorn"
+  default_prompt: "使用 $migrate-to-shoehorn 把测试数据中的类型断言安全迁移到 Shoehorn。"

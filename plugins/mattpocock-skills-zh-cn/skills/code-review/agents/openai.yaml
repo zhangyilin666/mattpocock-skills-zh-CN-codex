@@ -1,0 +1,4 @@
+interface:
+  display_name: "代码审查"
+  short_description: "从 Standards 与 Spec 两条轴线审查代码变更并报告问题"
+  default_prompt: "使用 $code-review 从指定基准审查当前变更，并分别报告 Standards 与 Spec 问题。"

@@ -1,0 +1,40 @@
+{
+  "name": "mattpocock-skills-zh-cn",
+  "version": "1.0.0",
+  "description": "面向 Codex 的简体中文工程工作流：需求追问、spec/ticket、TDD、代码审查、领域建模等。",
+  "author": {
+    "name": "zhangyilin666",
+    "url": "https://github.com/zhangyilin666"
+  },
+  "homepage": "https://github.com/zhangyilin666/mattpocock-skills-zh-CN-codex",
+  "repository": "https://github.com/zhangyilin666/mattpocock-skills-zh-CN-codex",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "codex",
+    "skills",
+    "tdd",
+    "code-review",
+    "domain-modeling",
+    "productivity",
+    "chinese"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Matt Pocock 工程 Skills（中文）",
+    "shortDescription": "适配 Codex 的中文工程工作流集合",
+    "longDescription": "25 个面向真实软件工程工作的简体中文 skills，覆盖需求澄清、spec 与 tickets、TDD、诊断、代码审查、架构和领域建模。",
+    "developerName": "zhangyilin666",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "帮我判断当前工程任务最适合使用哪个 skill。",
+      "用 TDD 实现这个功能，并在完成后做代码审查。",
+      "分析这个代码库的架构改进机会。"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "拆分为 Tickets"
+  short_description: "把计划拆成 tracer-bullet tickets"
+  default_prompt: "使用 $to-tickets 把这个计划拆成可独立领取的 tracer-bullet tickets。"
+policy:
+  allow_implicit_invocation: false

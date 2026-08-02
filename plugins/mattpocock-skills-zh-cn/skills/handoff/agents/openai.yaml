@@ -1,0 +1,6 @@
+interface:
+  display_name: "交接"
+  short_description: "把对话、决策、文件和后续工作压缩成可接手的交接文档"
+  default_prompt: "使用 $handoff 把当前上下文整理成另一位 Codex 可以直接接手的交接文档。"
+policy:
+  allow_implicit_invocation: false

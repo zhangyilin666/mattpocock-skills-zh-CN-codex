@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD"
+  short_description: "使用红—绿—重构循环，以测试优先方式实现功能或修复缺陷"
+  default_prompt: "使用 $tdd 按红—绿—重构循环实现这个需求，并先写第一个失败测试。"

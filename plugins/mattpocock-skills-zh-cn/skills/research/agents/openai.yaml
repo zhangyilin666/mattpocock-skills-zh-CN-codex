@@ -1,0 +1,4 @@
+interface:
+  display_name: "调研"
+  short_description: "使用高可信一手来源调研技术问题，并保存带引用的完整结论"
+  default_prompt: "使用 $research 对照高可信一手来源调研这个问题，并保存带来源的结论。"

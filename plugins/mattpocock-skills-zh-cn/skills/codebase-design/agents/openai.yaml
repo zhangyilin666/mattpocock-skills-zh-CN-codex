@@ -1,0 +1,4 @@
+interface:
+  display_name: "代码库设计"
+  short_description: "探索 deep-module 边界、接口形状与不同架构设计方案"
+  default_prompt: "使用 $codebase-design 为这个模块提出两种不同的接口设计，并比较取舍。"

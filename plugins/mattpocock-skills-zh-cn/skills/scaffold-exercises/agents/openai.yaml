@@ -1,0 +1,4 @@
+interface:
+  display_name: "搭建练习脚手架"
+  short_description: "按课程约定搭建 sections、problems、solutions 与 explainers"
+  default_prompt: "使用 $scaffold-exercises 按现有课程约定创建新的练习目录和占位内容。"

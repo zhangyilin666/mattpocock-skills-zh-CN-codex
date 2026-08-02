@@ -1,0 +1,6 @@
+interface:
+  display_name: "询问 Matt"
+  short_description: "根据当前工程任务推荐合适的 Skill、组合方式与执行顺序"
+  default_prompt: "使用 $ask-matt 判断当前任务最适合调用哪些工程 Skill，并说明推荐顺序。"
+policy:
+  allow_implicit_invocation: false

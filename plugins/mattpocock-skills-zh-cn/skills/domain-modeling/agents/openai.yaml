@@ -1,0 +1,4 @@
+interface:
+  display_name: "领域建模"
+  short_description: "从需求和代码中提取、统一并记录领域模型、边界与规范术语"
+  default_prompt: "使用 $domain-modeling 从当前需求提取领域术语、边界和需要记录的决策。"

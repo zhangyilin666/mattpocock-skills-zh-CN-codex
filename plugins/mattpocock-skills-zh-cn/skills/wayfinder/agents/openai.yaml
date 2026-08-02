@@ -1,0 +1,6 @@
+interface:
+  display_name: "寻路"
+  short_description: "把大型工作绘制成 decision tickets"
+  default_prompt: "使用 $wayfinder 把这项大型工作绘制成 shared map 和 decision tickets。"
+policy:
+  allow_implicit_invocation: false

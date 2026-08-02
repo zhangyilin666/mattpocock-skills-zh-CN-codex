@@ -1,0 +1,6 @@
+interface:
+  display_name: "带文档追问"
+  short_description: "对照项目文档追问设计，并同步记录术语与架构决策内容"
+  default_prompt: "使用 $grill-with-docs 对照项目文档追问这个设计，并同步记录确定的决策。"
+policy:
+  allow_implicit_invocation: false

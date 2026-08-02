@@ -1,0 +1,6 @@
+interface:
+  display_name: "分诊"
+  short_description: "按 triage roles 状态机分类、验证并推进 issues 与外部 PRs"
+  default_prompt: "使用 $triage 检查待分诊 issues，提出状态建议，并在写入前等待确认。"
+policy:
+  allow_implicit_invocation: false

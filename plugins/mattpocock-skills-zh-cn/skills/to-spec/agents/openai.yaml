@@ -1,0 +1,6 @@
+interface:
+  display_name: "转为 Spec"
+  short_description: "把对话和代码库上下文整理成可确认、可发布的工程 Spec"
+  default_prompt: "使用 $to-spec 把当前讨论整理成可实施的 spec，并在发布前让我确认。"
+policy:
+  allow_implicit_invocation: false

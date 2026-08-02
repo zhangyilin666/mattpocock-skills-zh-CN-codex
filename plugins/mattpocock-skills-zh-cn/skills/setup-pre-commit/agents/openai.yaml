@@ -1,0 +1,4 @@
+interface:
+  display_name: "配置 Pre-Commit"
+  short_description: "配置 Husky、lint-staged、类型检查和测试的提交前质量门"
+  default_prompt: "使用 $setup-pre-commit 为当前项目配置格式化、类型检查和测试的提交前钩子。"
